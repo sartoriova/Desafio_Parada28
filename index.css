@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.carouselContainer {
+    position: relative;
+    margin-top: 25px;
+    width: 500px;
+}
+
+.carouselContainer .slide {
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.carouselContainer .slide img {
+    width: 100%;
+    height: 600px;
+    box-shadow: 0px 10px 30px 0px #808080;
+    border-radius: 2%;
+}
+
+.carouselContainer .slide .legendaImg {
+    color: #ffffff;
+    font-size: 25px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0px 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
